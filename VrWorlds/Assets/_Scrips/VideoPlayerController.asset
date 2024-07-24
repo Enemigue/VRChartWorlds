@@ -31,10 +31,16 @@ MonoBehaviour:
     __instance_B: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    __Boolean_1:
     %SystemBoolean, null\r\n    __instance_C: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer,
     null\r\n    __instance_D: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n   
-    __instance_E: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    VideoPlayer:
-    %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    URL: %VRCSDK3ComponentsVRCUrlInputField,
-    null\r\n    VolumeSlider: %UnityEngineUISlider, null\r\n    Speakers: %UnityEngineAudioSourceArray,
-    null\r\n    VolumeSlider2: %UnityEngineUISlider, null\r\n    URL2: %VRCSDK3ComponentsVRCUrlInputField,
+    __instance_E: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n    __index_1:
+    %SystemInt32, null\r\n    __condition_1: %SystemBoolean, null\r\n    __instance_10:
+    %UnityEngineAudioSource, null\r\n    __value_1: %SystemSingle, null\r\n    __instance_11:
+    %UnityEngineAudioSourceArray, null\r\n    __Int32_1: %SystemInt32, null\r\n   
+    __start_1: %SystemInt32, null\r\n    __end_1: %SystemInt32, null\r\n    __step_1:
+    %SystemInt32, null\r\n    __instance_F: %UnityEngineAudioSourceArray, null\r\n   
+    __instance_12: %UnityEngineUISlider, null\r\n    VideoPlayer: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer,
+    null\r\n    URL: %VRCSDK3ComponentsVRCUrlInputField, null\r\n    VolumeSlider:
+    %UnityEngineUISlider, null\r\n    Speakers: %UnityEngineAudioSourceArray, null\r\n   
+    VolumeSlider2: %UnityEngineUISlider, null\r\n    URL2: %VRCSDK3ComponentsVRCUrlInputField,
     null\r\n    VideoPlayer2: %VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer, null\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n   
     .export PausePlay\r\n    \r\n    PausePlay:\r\n    \r\n        PUSH, VideoPlayer\r\n       
     PUSH, __instance_0\r\n        COPY\r\n        PUSH, __instance_0\r\n        PUSH,
@@ -79,7 +85,22 @@ MonoBehaviour:
     \"VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__Pause__SystemVoid\"\r\n       
     JUMP, 0x00000334\r\n        PUSH, VideoPlayer2\r\n        PUSH, __instance_E\r\n       
     COPY\r\n        PUSH, __instance_E\r\n        EXTERN, \"VRCSDK3VideoComponentsBaseBaseVRCVideoPlayer.__Play__SystemVoid\"\r\n       
-    JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+    JUMP, 0xFFFFFFFC\r\n    \r\n    .export SetVolume2\r\n    \r\n    SetVolume2:\r\n   
+    \r\n        PUSH, Speakers\r\n        PUSH, __instance_F\r\n        COPY\r\n       
+    PUSH, __instance_F\r\n        PUSH, __end_1\r\n        EXTERN, \"UnityEngineAudioSourceArray.__get_Length__SystemInt32\"\r\n       
+    PUSH, __start_1\r\n        PUSH, __index_1\r\n        COPY\r\n        PUSH, __index_1\r\n       
+    PUSH, __end_1\r\n        PUSH, __condition_1\r\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\r\n       
+    PUSH, __condition_1\r\n        JUMP_IF_FALSE, 0x00000474\r\n        PUSH, Speakers\r\n       
+    PUSH, __instance_11\r\n        COPY\r\n        PUSH, Speakers\r\n        PUSH,
+    __instance_F\r\n        COPY\r\n        PUSH, __index_1\r\n        PUSH, __Int32_1\r\n       
+    COPY\r\n        PUSH, __instance_11\r\n        PUSH, __Int32_1\r\n        PUSH,
+    __instance_10\r\n        EXTERN, \"UnityEngineAudioSourceArray.__Get__SystemInt32__UnityEngineAudioSource\"\r\n       
+    PUSH, VolumeSlider2\r\n        PUSH, __instance_12\r\n        COPY\r\n       
+    PUSH, __instance_12\r\n        PUSH, __value_1\r\n        EXTERN, \"UnityEngineUISlider.__get_value__SystemSingle\"\r\n       
+    PUSH, __instance_10\r\n        PUSH, __value_1\r\n        EXTERN, \"UnityEngineAudioSource.__set_volume__SystemSingle__SystemVoid\"\r\n       
+    PUSH, __index_1\r\n        PUSH, __step_1\r\n        PUSH, __index_1\r\n       
+    EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\r\n       
+    JUMP, 0x0000037C\r\n        JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
   assemblyError: 
   graphData:
     name: 
@@ -133,7 +154,7 @@ MonoBehaviour:
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
     - fullName: Variable_UnityEngineUISlider
       uid: 0ac9f3a6-fd0c-4f17-8eeb-c622a133e44e
-      position: {x: -1086.0251, y: -827.7501}
+      position: {x: -2172.0503, y: -1655.5002}
       nodeUIDs:
       - 
       - 
@@ -226,7 +247,7 @@ MonoBehaviour:
         stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|SetVolume
     - fullName: Variable_UnityEngineAudioSourceArray
       uid: 903f1c5d-b355-4d0a-ac66-9e820b7f6a78
-      position: {x: -1086.0251, y: -827.7501}
+      position: {x: -2172.0503, y: -1655.5002}
       nodeUIDs:
       - 
       - 
